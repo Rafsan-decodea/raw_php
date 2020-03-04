@@ -45,12 +45,12 @@ class DB{
         $data = $this->con->query($q);
         if ($data)
         {
-           return $data;
+           return true;
         }
         else
         {
             echo "Error From DataBase";
-            return false;
+           
         }
     }
 
