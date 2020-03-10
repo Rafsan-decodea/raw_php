@@ -54,6 +54,7 @@ $data = $db->getData($sql);
                                 <img height="80px" src="/uploads/<?= $d['image'] ?>" alt="Italian Trulli">
                                 </td>
                                 <td>
+                                
                                   <a class="btn btn-danger" href="delete.php?imgid=<?= $d['id'] ?>">Delete</a>
                                   <a class="btn btn-info" href="edit.php?imgid=<?= $d['id'] ?>">Edit</a>
                                 </td>
