@@ -12,6 +12,8 @@ class DB{
         $this->con = new mysqli($this->host,$this->username,$this->password,$this->dbname)  ;
         // if($con){return true;}else{return false;}
     }
+
+
     public function insert($q)
     {
         $this->connect();
@@ -25,6 +27,7 @@ class DB{
             return false;
         }
     }
+
     public function getData($q)
     {
         $this->connect();

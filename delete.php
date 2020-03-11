@@ -8,13 +8,14 @@ $all_data = $db->getData($sql);
 $row  = $all_data->fetch_assoc();
 
 
-
 if (file_exists('uploads/'.$row['image']))
 {
    unlink('uploads/'.$row['image']);
 }
+
 $sql2 = "DELETE  FROM number WHERE id = $id";
 $delete_data = $db->delete($sql2);
+
 
 if ($delete_data)
 {
