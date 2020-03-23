@@ -18,7 +18,7 @@ class DB{
         $insert = $this->con->query($q);
         if($insert)
         {
-            return true;
+            return $insert;
         }
         else
         {

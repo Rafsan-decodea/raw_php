@@ -4,7 +4,6 @@ include('dd.php');
 $db = new DB();
 $sql = "SELECT * FROM number ORDER BY id DESC";
 $data = $db->getData($sql);
-// dd($data);
 
 ?>
 
@@ -48,7 +47,7 @@ $data = $db->getData($sql);
                                     <?= $d['number'] ?>
                                 </td>
                                 <td>
-                                    <?= $d['name']?>
+                                    <?= $d['title'] ?>
                                 </td>
                                 <td>
                                 <img height="80px" src="/uploads/<?= $d['image'] ?>" alt="Italian Trulli">

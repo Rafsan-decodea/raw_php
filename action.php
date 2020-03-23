@@ -1,6 +1,6 @@
 <?php
-include("DB.php");
-include("dd.php");
+include  "DB.php";
+include  "dd.php";
 $db = new DB();
 
 if(isset($_POST['submit']))
@@ -23,13 +23,11 @@ if(isset($_POST['submit']))
     $xpd = explode('.',$file_name);
     $ext  = strtolower(end($xpd));
     $new_name = time().".".$ext;
-    $sql = "INSERT INTO number(number, name,image) VALUES('$number', '$title','$new_name')";
-    if( $db->insert($sql) )
+    $sql = "INSERT INTO number (number, title ,image) VALUES('$number', '$title','$new_name')";
+    if($db->insert($sql))
     {
         move_uploaded_file($file_tmp, 'uploads/'. $new_name);
-        
         header("location: view.php");
-        
         exit;  
     }
     else
